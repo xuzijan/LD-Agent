@@ -32,7 +32,7 @@
 
 </div>
 
-The official implementation of NAACL 2025 paper **"[Hello Again! LLM-powered Personalized Agent for Long-term Dialogue](https://arxiv.org/pdf/2406.05925)"**.
+The official implementation of NAACL 2025 paper **"[Hello Again! LLM-powered Personalized Agent for Long-term Dialogue](https://aclanthology.org/2025.naacl-long.272/)"**.
 
 ## 🎉 News 
 
