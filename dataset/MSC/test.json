@@ -1,0 +1,9 @@
+[
+  {
+    "conversations": [
+      {"content": "You are a helpful assistant."},
+      {"content": "Hello, how are you?"},
+      {"content": "I am doing well, thank you for asking!"}
+    ]
+  }
+]

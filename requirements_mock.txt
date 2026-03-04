@@ -1,0 +1,7 @@
+# Minimal deps for mock eval (ChatGPT path)
+torch>=1.13.0
+openai>=1.0.0
+nltk
+numpy
+peft
+transformers

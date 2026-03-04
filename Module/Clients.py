@@ -12,7 +12,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 class GPTClient():
     def __init__(self, model, logger, args):
         # GPT Client
-        self.client = OpenAI(api_key=args.api_key)
+        kwargs = {"api_key": args.api_key}
+        if getattr(args, "api_base_url", None):
+            kwargs["base_url"] = args.api_base_url
+        self.client = OpenAI(**kwargs)
         self.args = args
         self.logger = logger
         self.model = model

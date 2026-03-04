@@ -104,14 +104,8 @@ class QuickEval():
         mean_all_samples_score = sum(all_samples_score) / len(all_samples_score)
         self.logger.info(f"Mean Score of {idx + 1} samples: {mean_all_samples_score}")
 
-        mean_ss2_score = sum(ss2_score) / len(ss2_score)
-        self.logger.info(f"Mean Session 2 Score of {idx + 1} samples: {mean_ss2_score}")
-
-        mean_ss3_score = sum(ss3_score) / len(ss3_score)
-        self.logger.info(f"Mean Session 3 Score of {idx + 1} samples: {mean_ss3_score}")
-
-        mean_ss4_score = sum(ss4_score) / len(ss4_score)
-        self.logger.info(f"Mean Session 4 Score of {idx + 1} samples: {mean_ss4_score}")        
-
-        mean_ss5_score = sum(ss5_score) / len(ss5_score)
-        self.logger.info(f"Mean Session 5 Score of {idx + 1} samples: {mean_ss5_score}")
+        for sess_name, sess_scores in [("Session 2", ss2_score), ("Session 3", ss3_score),
+                                       ("Session 4", ss4_score), ("Session 5", ss5_score)]:
+            if len(sess_scores) > 0:
+                mean_sess = sum(sess_scores) / len(sess_scores)
+                self.logger.info(f"Mean {sess_name} Score of {idx + 1} samples: {mean_sess}")

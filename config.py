@@ -29,6 +29,7 @@ def get_args(description='Config of LD-Agent'):
 
     # ChatGPT setting
     parser.add_argument('--api_key', type=str, default='Your API Key', help='OpenAI API Key.')
+    parser.add_argument('--api_base_url', type=str, default=None, help='OpenAI API base URL (for mock server).')
 
     # ChatGLM setting
     parser.add_argument('--max_input_length', type=int, default=2048, help='The number of maximum size of LLM input.')
